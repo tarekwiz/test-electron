@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>InduCode setup!</title>
+  </head>
+
+  <body>
+    <h1>Please enter the url to save.!</h1>
+    <input type="text" id="url" />
+    <button id="save">Save</button>
+  </body>
+
+  <script>
+    const saveButton = document.getElementById("save");
+    const inputUrl = document.getElementById("url");
+    //console.log(window.api.getPath());
+    saveButton.addEventListener("click", () => {
+      const url = inputUrl.value;
+      window.api.setUrl(url);
+    });
+  </script>
+</html>
